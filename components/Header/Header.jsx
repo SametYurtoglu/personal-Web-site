@@ -50,13 +50,8 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <Link href="/Projects" legacyBehavior>
-            <a className={router.pathname === '/Projects' ? 'text-fuchsia-600 underline underline-offset-2' : ''}>Projects</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/Blog" legacyBehavior>
-            <a className={router.pathname === '/Blog' ? 'text-fuchsia-600 underline underline-offset-2' : ''}>Blog</a>
+          <Link href="/projects" legacyBehavior>
+            <a className={router.pathname === '/projects' ? 'text-fuchsia-600 underline underline-offset-2' : ''}>Projects</a>
           </Link>
         </li>
 
@@ -79,7 +74,6 @@ const Header = () => {
             className={`outline-none absolute right-20 duration-700 block opacity-100 visible  sm:hidden ${navOpen && " !opacity-0  !invisible "}`}
             onClick={() => {
               setNavOpen(!navOpen);
-              console.log(navOpen);
             }}
           >
             <GiHamburgerMenu className="text-2xl" />

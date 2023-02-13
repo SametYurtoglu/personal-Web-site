@@ -28,6 +28,8 @@ const MyPCards = () => {
   return (
     <div className='flex flex-wrap justify-center gap-10'>
         <MyPCardsItem avatar='/images/pb-logo.jpg' title='PlusBot' desc='Gelişmiş Discord Bot' link='#'/>
+        <MyPCardsItem avatar='/images/pb-logo.jpg' title='PlusBot' desc='Gelişmiş Discord Bot' link='#'/>
+        <MyPCardsItem avatar='/images/pb-logo.jpg' title='PlusBot' desc='Gelişmiş Discord Bot' link='#'/>
     </div>
   )
 }

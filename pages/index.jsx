@@ -1,10 +1,9 @@
 import MyPCards from '@/components/Cards/MyPCards'
 import TechCards from '@/components/Cards/TechCards'
-import Footer from '@/components/Footer/Footer'
-import Header from '@/components/Header/Header'
 import SocailMedia from '@/components/SocailMedia'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -15,50 +14,54 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
       <div>
           <div className="container mx-auto">
 
               <div className="flex justify-center md:justify-between items-center mt-10">
+
                   <div className='flex flex-col gap-1'>
-                          
                       <div className='2xl:text-left xl:text-left lg:text-left md:text-left text-center'>
-                      <h1 className='dark:text-gray-300 text-gray-700 font-semibold text-3xl'>Samet Yurtoğlu</h1>
+                      <h1 className='dark:text-gray-300 text-gray-700 font-semibold text-3xl'>SametY</h1>
                       <h2 className='text-indigo-600 text-[18px] font-semibold underline'>FrontEnd Dev.</h2>
                       <p className='dark:text-gray-300 text-gray-700 font-medium w-[300px] md:w-[550px] text-[16px]'>Selam,Ben samet.</p>
                       </div>
-                      
                     <div className='mt-5'>
                           <SocailMedia/>
                       </div>
-
                   </div>
+
+                    {/* kedi foto */}
                   <div>
                     <div className='relative hidden md:flex md:w-56 md:h-56'>
                       <Image alt='' src={'/images/pp4.png'} fill className='rounded-full animate-pulse'/>
                     </div>
                   </div>
+                  {/* kedi foto end */}
+
               </div>
 
 
+              {/* programala dil */}
             <div className='flex flex-col gap-5 mt-5 text-center md:text-left'>
               <h1 className='text-blue-600 font-bold text-2xl'>kullandığım teknolojiler</h1>
                 <div className="">
                   <TechCards/>
                 </div>
             </div>
+            {/* programala dil end */}
 
+
+              {/* project card */}
             <div className='flex items-center flex-col gap-16 mt-10'>
               <a href='#' className='text-3xl font-bold text-blue-600 border border-gray-500 px-5  py-2 hover:-translate-y-2 duration-300 cursor-pointer dark:hover:bg-blue-600/10 hover:bg-blue-600/60 rounded-lg'>Projelerim</a>
                 <div className="">
                     <MyPCards/>
                 </div>
-                
+                <Link href={'/projects'} className='bg-blue-600/10 py-3 px-4 hover:bg-blue-600/30 rounded-full'>Daha Fazla</Link>
             </div>
-
+            {/* project card end*/}
           </div>
       </div>
-      <Footer/>
     </>
   )
 }

@@ -19,15 +19,11 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link href="/Projects" legacyBehavior>
-            <a className={router.pathname === '/Projects' ? 'text-fuchsia-600 underline underline-offset-2' : ''}>Projects</a>
+          <Link href="/projects" legacyBehavior>
+            <a className={router.pathname === '/projects' ? 'text-fuchsia-600 underline underline-offset-2' : ''}>Projects</a>
           </Link>
         </li>
-        <li>
-          <Link href="/Blog" legacyBehavior>
-            <a className={router.pathname === '/Blog' ? 'text-fuchsia-600 underline underline-offset-2' : ''}>Blog</a>
-          </Link>
-        </li>
+
 
             </ul>
         </div>
@@ -40,6 +36,3 @@ const Footer = () => {
 }
 
 export default Footer
-
-
-{/* <h1 className='select-none text-center text-white font-sans'>© 2023 All rights reserved. Made by <a href="https://github.com/SametYurtoglu" className='text-gray-500 hover:underline' target={'_blank'} rel='noreferrer'>NotFounds</a> using <span className='text-fuchsia-500'>NextJS</span> and <span className='text-sky-500'>TailwindCSS</span></h1> */}
